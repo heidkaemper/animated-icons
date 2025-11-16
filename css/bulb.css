@@ -61,17 +61,16 @@
         transform: scale(.75);
         opacity: 0;
     }
-}
 
-.bulb.isActive {
-    svg {
-        animation: bulb-svg 400ms ease-in-out;
-        fill: orange;
-        stroke: chocolate;
+    &:has(input:checked) {
+        svg {
+            animation: bulb-svg 400ms ease-in-out;
+            fill: orange;
+            stroke: chocolate;
+        }
+
+        &::before {
+            animation: bulb-glow 400ms 200ms ease-out;
+        }
     }
-
-    &::before {
-        animation: bulb-glow 400ms 200ms ease-out;
-    }
 }
-

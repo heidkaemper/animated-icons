@@ -57,17 +57,16 @@
         transform: scale(0);
         opacity: 0;
     }
-}
 
-.heart.isActive {
-    svg {
-        animation: heart-svg 400ms ease-in-out;
-        fill: red;
-        stroke: red;
+    &:has(input:checked) {
+        svg {
+            animation: heart-svg 400ms ease-in-out;
+            fill: red;
+            stroke: red;
+        }
+
+        &::before {
+            animation: heart-circle 400ms 100ms ease-out;
+        }
     }
-
-    &::before {
-        animation: heart-circle 400ms 100ms ease-out;
-    }
 }
-

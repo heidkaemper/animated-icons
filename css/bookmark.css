@@ -49,17 +49,16 @@
         transform: scale(1);
         opacity: 0;
     }
-}
 
-.bookmark.isActive {
-    svg {
-        animation: bookmark-svg 300ms ease-out;
-        fill: brown;
-        stroke: brown;
+    &:has(input:checked) {
+        svg {
+            animation: bookmark-svg 300ms ease-out;
+            fill: brown;
+            stroke: brown;
+        }
+
+        &::before {
+            animation: bookmark-dots 300ms 250ms ease-out;
+        }
     }
-
-    &::before {
-        animation: bookmark-dots 300ms 250ms ease-out;
-    }
 }
-
