@@ -1,0 +1,65 @@
+@keyframes bookmark-svg {
+    0% {
+        fill: transparent;
+        stroke: currentColor;
+    }
+
+    60% {
+        fill: transparent;
+        stroke: currentColor;
+        transform: scaleY(0.7) translateY(-10%);
+    }
+
+    75% {
+        fill: brown;
+        stroke: brown;
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes bookmark-dots {
+    25% {
+        opacity: .25;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.bookmark {
+    svg {
+        grid-row: 1;
+        grid-column: 1;
+        transform-origin: 50% 0%;
+    }
+
+    &::before {
+        content: "";
+        grid-row: 1;
+        grid-column: 1;
+        width: 70%;
+        height: 80%;
+        border: 4px dotted brown;
+        border-radius: 100%;
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.bookmark.isActive {
+    svg {
+        animation: bookmark-svg 300ms ease-out;
+        fill: brown;
+        stroke: brown;
+    }
+
+    &::before {
+        animation: bookmark-dots 300ms 250ms ease-out;
+    }
+}
+

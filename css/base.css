@@ -1,0 +1,19 @@
+body {
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+button {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background: #eee;
+    color: black;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+}
